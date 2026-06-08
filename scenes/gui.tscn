@@ -1,0 +1,289 @@
+[gd_scene format=3 uid="uid://cxux6xp5f6oik"]
+
+[ext_resource type="Script" uid="uid://bj13jxlv471hl" path="res://scripts/hud.gd" id="1_hud"]
+[ext_resource type="FontFile" uid="uid://dtm7tlu1ua3i" path="res://assets/m6x11plus.ttf" id="2_font"]
+[ext_resource type="Texture2D" uid="uid://tqgcis0q58yy" path="res://assets/Fruits/Melon.png" id="3_b8iy7"]
+[ext_resource type="Texture2D" uid="uid://7jffe270juwu" path="res://assets/hud elements/hearts_hud.png" id="3_hearts"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8iy7"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqlde"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08a8y"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yii4"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yt8u"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p54wi"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xki8e"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3be1"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqxrh"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qupqx"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw8q3"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bglms"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsswy"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvbyd"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpw45"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mbii"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnopy"]
+atlas = ExtResource("3_b8iy7")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ynd5l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8iy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqlde")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08a8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7yii4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yt8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p54wi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xki8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3be1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqxrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qupqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jw8q3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bglms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsswy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvbyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpw45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mbii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnopy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="GUI" type="CanvasLayer" unique_id=822336279 groups=["hud"]]
+process_mode = 3
+script = ExtResource("1_hud")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=455971075]
+offset_left = 27.0
+offset_top = 7.0
+offset_right = 71.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 23
+text = "0"
+horizontal_alignment = 1
+
+[node name="MelonIcon" type="AnimatedSprite2D" parent="." unique_id=376313966]
+position = Vector2(18, 21)
+scale = Vector2(1.1562501, 1.0625)
+sprite_frames = SubResource("SpriteFrames_ynd5l")
+autoplay = "default"
+
+[node name="LivesLabel" type="Label" parent="." unique_id=1165206511]
+offset_left = 39.0
+offset_top = 28.0
+offset_right = 60.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 22
+text = "3"
+horizontal_alignment = 1
+
+[node name="HeartsHud" type="Sprite2D" parent="." unique_id=1809566132]
+position = Vector2(20, 40)
+texture = ExtResource("3_hearts")
+
+[node name="PauseLabel" type="Label" parent="." unique_id=867056773]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -15.0
+offset_right = 60.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WinPanel" type="ColorRect" parent="." unique_id=1075825390]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="WinVBox" type="VBoxContainer" parent="WinPanel" unique_id=1363608590]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -50.0
+offset_right = 98.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="WinTitle" type="Label" parent="WinPanel/WinVBox" unique_id=2043861272]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84, 0, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "TU GANAS!"
+horizontal_alignment = 1
+
+[node name="FinalScore" type="Label" parent="WinPanel" unique_id=1486504617]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 120.0
+offset_right = 310.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 16
+text = "Puntaje Final: 0"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="WinPanel" unique_id=1632500705]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 175.0
+offset_right = 280.0
+offset_bottom = 198.0
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 11
+text = "Volver al menu"
+
+[node name="DeathPanel" type="ColorRect" parent="." unique_id=1232858410]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="DeathVBox" type="VBoxContainer" parent="DeathPanel" unique_id=1213865934]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="DeathTitle" type="Label" parent="DeathPanel/DeathVBox" unique_id=1532486634]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.2, 0.2, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="DeathFinalScore" type="Label" parent="DeathPanel/DeathVBox" unique_id=587304008]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 16
+text = "Puntaje Final: 0"
+horizontal_alignment = 1
+
+[node name="RetryButton" type="Button" parent="DeathPanel/DeathVBox" unique_id=1571706219]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 11
+text = "Volver a intentar"

@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bgd68cfx37c4a"]
+
+[ext_resource type="Script" uid="uid://dxg6hj377d06m" path="res://scripts/menu.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://gl3p0ehj3xf5" path="res://assets/inicio.png" id="2_mhnvy"]
+[ext_resource type="FontFile" uid="uid://dtm7tlu1ua3i" path="res://assets/m6x11plus.ttf" id="3_4ytvr"]
+[ext_resource type="AudioStream" uid="uid://c7tp32xkrcffk" path="res://assets/inicio.mp3" id="4_g3eks"]
+[ext_resource type="AudioStream" path="res://assets/start.mp3" id="5_start"]
+
+[node name="Menu" type="Control" unique_id=1070407511]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Inicio" type="Sprite2D" parent="." unique_id=1539617550]
+position = Vector2(213.25, 123.5)
+scale = Vector2(0.30922964, 0.3216146)
+texture = ExtResource("2_mhnvy")
+
+[node name="StartButton" type="Button" parent="." unique_id=1976583248]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 127.0
+offset_right = 263.0
+offset_bottom = 161.5
+theme_override_fonts/font = ExtResource("3_4ytvr")
+theme_override_font_sizes/font_size = 21
+text = "jugar"
+
+[node name="QuitButton" type="Button" parent="." unique_id=283604241]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 185.0
+offset_right = 264.0
+offset_bottom = 219.5
+theme_override_fonts/font = ExtResource("3_4ytvr")
+theme_override_font_sizes/font_size = 21
+text = "Salir"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=471938514]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -95.0
+offset_right = 123.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1330795821]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.077563785, 0, 1)
+theme_override_fonts/font = ExtResource("3_4ytvr")
+theme_override_font_sizes/font_size = 47
+text = "Frog Aventure"
+horizontal_alignment = 1
+
+[node name="Inicio2" type="AudioStreamPlayer2D" parent="." unique_id=1630214780]
+position = Vector2(6, 5)
+stream = ExtResource("4_g3eks")
+autoplay = true
+
+[node name="Start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_start")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_pressed"]

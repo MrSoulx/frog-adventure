@@ -1,19 +1,19 @@
 # Frog Adventure
 
-A 2D pixel-art platformer built with Godot 4.
+Un platformer 2D pixel-art hecho con Godot 4.
 
-## Controls
+## Controles
 
-| Action | Key |
-|--------|-----|
-| Move Left | ← / A |
-| Move Right | → / D |
-| Jump | Space |
-| Pause | Esc |
+| Acción | Tecla |
+|--------|-------|
+| Moverse izquierda | ← / A |
+| Moverse derecha | → / D |
+| Saltar | Espacio |
+| Pausar | Esc |
 
-## How to Play
+## Cómo Jugar
 
-- Collect melons (+1 pt) and the star (+5 pts, you win!)
-- Stomp enemies to defeat them (+3 pts)
-- Avoid enemies or you'll lose a life
-- You have 3 lives — lose them all and it's game over
+- Recolecta melones (+1 pts) y la estrella (+5 pts, ¡ganas!)
+- Salta sobre los enemigos para derrotarlos (+3 pts)
+- Evita chocar con enemigos o perderás una vida
+- Tienes 3 vidas — si las pierdes todas, game over

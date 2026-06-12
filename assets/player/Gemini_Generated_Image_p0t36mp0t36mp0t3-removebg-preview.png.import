@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y7qjlv5d1ixo"
-path="res://.godot/imported/climb.png-f40b8765b8131c43ebec876a8ba10b3d.ctex"
+uid="uid://1jaijvgimfr8"
+path="res://.godot/imported/Gemini_Generated_Image_p0t36mp0t36mp0t3-removebg-preview.png-6a88a28680c2e78b94670d45cc01e7af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/climb.png"
-dest_files=["res://.godot/imported/climb.png-f40b8765b8131c43ebec876a8ba10b3d.ctex"]
+source_file="res://assets/player/Gemini_Generated_Image_p0t36mp0t36mp0t3-removebg-preview.png"
+dest_files=["res://.godot/imported/Gemini_Generated_Image_p0t36mp0t36mp0t3-removebg-preview.png-6a88a28680c2e78b94670d45cc01e7af.ctex"]
 
 [params]
 

@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cufrjhvw4vr8s"]
+
+[ext_resource type="Texture2D" uid="uid://1jaijvgimfr8" path="res://assets/player/Gemini_Generated_Image_p0t36mp0t36mp0t3-removebg-preview.png" id="1_7ccba"]
+[ext_resource type="Script" uid="uid://bdqt3jhlgvu2n" path="res://scripts/shuriken.gd" id="1_script"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k18gy"]
+atlas = ExtResource("1_7ccba")
+region = Rect2(0, 0, 238, 261)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rvwh"]
+atlas = ExtResource("1_7ccba")
+region = Rect2(238, 0, 238, 261)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr3c8"]
+atlas = ExtResource("1_7ccba")
+region = Rect2(476, 0, 238, 261)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvn8i"]
+atlas = ExtResource("1_7ccba")
+region = Rect2(714, 0, 238, 261)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tacqd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k18gy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rvwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jr3c8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvn8i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c2qga"]
+radius = 7.071068
+
+[node name="shuriken" type="CharacterBody2D" unique_id=1519544276]
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("1_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=409545924]
+position = Vector2(3.8146973e-06, 0)
+scale = Vector2(0.073529445, 0.073275864)
+sprite_frames = SubResource("SpriteFrames_tacqd")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.28323436
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c2qga")
+
+[node name="Timer" type="Timer" parent="." unique_id=893179421]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=2133535137]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=579478124]
+shape = SubResource("CircleShape2D_c2qga")

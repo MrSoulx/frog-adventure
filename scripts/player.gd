@@ -6,6 +6,9 @@ var gravity = 300
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
+var shuriken_scene = preload("res://scenes/shuriken.tscn")
+var can_shoot = true
+
 var score = 0
 var lives = 3:
 	set(value):
@@ -40,7 +43,19 @@ func _physics_process(delta):
 
 	move_and_slide()
 	_check_overlaps()
+	_handle_shoot()
 	update_animations(input_axis)
+
+func _handle_shoot():
+	if Input.is_action_just_pressed("shoot") and can_shoot:
+		can_shoot = false
+		var s = shuriken_scene.instantiate()
+		s.direction = -1 if animated_sprite_2d.flip_h else 1
+		s.global_position = global_position + Vector2(20 * s.direction, 0)
+		s.player = self
+		get_parent().add_child(s)
+		await get_tree().create_timer(0.4).timeout
+		can_shoot = true
 
 func _check_overlaps():
 	var areas = $Hitbox.get_overlapping_areas()
@@ -120,7 +135,7 @@ func _on_hitbox_body_entered(body):
 		_check_enemy_collision(body)
 
 func _check_enemy_collision(enemy):
-	if velocity.y > 0 and global_position.y < enemy.global_position.y:
+	if global_position.y + 18 < enemy.global_position.y:
 		if enemy.has_method("die"):
 			enemy.die()
 		else:
